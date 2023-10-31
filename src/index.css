@@ -9,6 +9,7 @@
   --separator-color: #D4D6E0; 
 }
 
-bode {
+body {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
