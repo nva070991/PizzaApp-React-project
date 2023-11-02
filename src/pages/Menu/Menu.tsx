@@ -2,7 +2,7 @@ import axios, { AxiosError } from 'axios';
 import Heading from '../../components/Heading/Heading';
 import Search from '../../components/Search/Search';
 import { PREFIX } from '../../helpers/API';
-import { Product } from '../../interfaces/interface';
+import { Product } from '../../interfaces/product.interface';
 import styles from './Menu.module.css'
 import {useState, useEffect} from 'react'
 import { MenuList } from './MenuList/MenuList';
@@ -62,3 +62,5 @@ export function Menu() {
 		</div>
 	</>
 }
+
+export default Menu

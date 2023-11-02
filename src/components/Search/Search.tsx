@@ -7,7 +7,7 @@ const Search = forwardRef<HTMLInputElement, SearchProps>(function Search({classN
 
 	return (<>
 		<div className={styles['box-search']}>
-			<input {...props} ref={ref} className={
+			<input id='inputSearchHead' {...props} ref={ref} className={
 				cn(className, styles['input'], {
 					[styles.invalid] : !isValid
 				})} />

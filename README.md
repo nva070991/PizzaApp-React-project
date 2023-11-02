@@ -5,3 +5,4 @@ axios
 useParams()
 react-router-dom
 useLoaderData()
+lazy() suspens()
