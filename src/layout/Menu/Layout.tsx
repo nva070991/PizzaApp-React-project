@@ -2,12 +2,25 @@ import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import styles from './Layout.module.css'
 import Button from '../../components/Button/Button';
 import cn from 'classNames'
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '../../store/store';
+import { getProfile, userAction } from '../../store/user.slice';
+import { useEffect } from 'react';
 
 export function Layout() {
 	const navigate = useNavigate()
+	const dispatch = useDispatch<AppDispatch>()
+	const profile = useSelector((s:RootState)=>s.user.profile)
+	const items = useSelector((s:RootState) => s.cart.items)
+
+	useEffect(()=> {
+		dispatch(getProfile())
+	},[dispatch])
+
 
 	const logOut = () => {
-		localStorage.removeItem('jwt')
+		dispatch(userAction.logOut())
+
 		navigate('/auth/login')
 	}
 
@@ -18,8 +31,8 @@ export function Layout() {
 
 			<div className={styles['user']}>
 				<img src='/avatar-icon.svg' alt='avatar-icon' className={styles['avatar']} />
-				<div className={styles['name']}> Василий Налимов	</div>
-				<div className={styles['email']}> nva070991@gmail.com 	</div>
+				<div className={styles['name']}> {profile?.name}	</div>
+				<div className={styles['email']}> {profile?.email} 	</div>
 
 			</div>
 	
@@ -34,7 +47,8 @@ export function Layout() {
 					[styles.active] : isActive
 				})} >
 					<img src='/cart-icon.svg' alt='cart-icon' className={styles['icons']} />
-					Корзина</NavLink>
+					Корзина <span className={styles['cart-count']}> {items.reduce((acc, item)=> acc+= item.count, 0)}</span>
+				</NavLink>
 			</div >
 			<Button appearence='small' onClick={logOut} className={styles['exit']}>
 				<img src='/exit-icon.svg' alt='cart-icon' className={styles['icons']} />
