@@ -1,8 +1,14 @@
-project under development
+Сайт доставки пиццы
 
-axios
+![Alt text](image-4.png)
+![Alt text](image-1.png)
+![Alt text](image-2.png)
+![Alt text](image-3.png)
 
-useParams()
-react-router-dom
-useLoaderData()
-lazy() suspens()
+TypeScript / React 
+React-router-dom 
+REDUX Toolkit 
+Cтилизованные компоненты
+Axios
+
+
