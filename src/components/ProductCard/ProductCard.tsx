@@ -10,7 +10,7 @@ function ProductCard(props: ProductCardProps) {
 
 	const add = (e: React.MouseEvent) => {
 		e.preventDefault()
-		dispatch(cartAction.add(props.id))
+		dispatch(cartAction.increase(props.id))
 	}
 
 	return (	

@@ -2,3 +2,48 @@
 	margin-bottom: 40px;
 }
 
+.total {
+	max-width: 640px;
+}
+
+.line {
+	display: flex;
+	justify-content: space-between;
+	padding: 17px 0;
+	
+}
+
+.line span {
+	color: #b8b8b8;
+}
+
+.hr {
+	margin: 0;
+	border: 1px solid #F1F2F3;
+}
+
+.text {
+	color: var(--text-color);
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.price {
+	color: var(--text-color);
+	font-size: 19px;
+	font-weight: 400;
+}
+
+.total-count {
+	color: #b8b8b8;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.checkout {
+	max-width: 640px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 70px;
+}

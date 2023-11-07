@@ -8,11 +8,11 @@ function CartItem(props: CartItemProps) {
 	const dispatch = useDispatch<AppDispatch>()
 
 	const increase = () => {
-		dispatch(cartAction.add(props.id))
+		dispatch(cartAction.increase(props.id))
 	}
 
 	const decrease = () => {
-		dispatch(cartAction.remove(props.id))
+		dispatch(cartAction.decrease(props.id))
 
 	}
 
