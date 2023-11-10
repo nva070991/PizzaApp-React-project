@@ -68,7 +68,7 @@ export function Register() {
 					<label htmlFor='registerName'>Ваше имя</label>
 					<Input id='registerName' name='registerName' placeholder='Имя'/>
 				</div>
-				<Button onClick={()=>{}} appearence='big'> Вход</Button>
+				<Button onClick={()=>{}} appearence='big'> Зарегистрироваться</Button>
 		
 			</form>		
 		

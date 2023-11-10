@@ -40,7 +40,7 @@ export function Cart() {
 	}
 
 	const checkOut = async () => {
-		const {data} = await axios.post(`${PREFIX}/order`, {
+		await axios.post(`${PREFIX}/order`, {
 			products: items
 		}, {
 			headers: {
